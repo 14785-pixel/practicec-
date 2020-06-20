@@ -1,9 +1,9 @@
+//This code inserts a digit in ascending order in a number that is ascending
 #include <iostream>
-#include<vector>
 using namespace std;
 int insert(int x,int n){
-    if((n/10)==0&&x<n)
-        return x*10+n;
+    if(n==0)
+    return x;
         
     
    if(n%10<=x)
@@ -14,7 +14,7 @@ int insert(int x,int n){
 int main()
 {
   
-   cout <<insert(8,27698)<< endl; 
+   cout <<insert(1,2769)<< endl; 
    
    return 0;
 }
