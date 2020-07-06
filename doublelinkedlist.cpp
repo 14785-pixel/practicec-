@@ -18,6 +18,7 @@ class Doublelist{
  void removeFront();
  void removeBack();
  void display();
+ void displayrev();
 };
 Doublelist::Doublelist(){
     header= new Node;
@@ -59,16 +60,23 @@ void Doublelist::display(){
     }
     cout<<endl;
 }
+void Doublelist::displayrev(){
+    Node* temp = trailer->prev;
+    while(temp!=header){
+        cout<<temp->data<<" ";
+        temp=temp->prev;
+    }
+    cout<<endl;
+}
 int main()
 {
  Doublelist  d;
 int a[]={6,5,4,15,17,18,19,14};
 for(int x:a){
-    d.addFront(x);
+    d.addBack(x);
 }
-d.removeFront();
-d.removeBack();
- d.display();
+d.display();
+d.displayrev();
    
    return 0;
 }
